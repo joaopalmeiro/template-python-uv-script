@@ -10,9 +10,39 @@
   - https://github.com/astral-sh/ruff/issues/809
   - https://github.com/astral-sh/ruff/discussions/3363
   - https://github.com/astral-sh/ruff/issues/1530
+- uv:
+  - https://github.com/astral-sh/uv?tab=readme-ov-file#python-discovery
 
 ## Commands
 
 ```bash
 zed ~/Documents/GitHub/template-python-uv-script/
+```
+
+```bash
+uv --help
+```
+
+```bash
+uv venv --help
+```
+
+```bash
+uv pip install --help
+```
+
+```bash
+uv pip list --help
+```
+
+```bash
+which ruff
+```
+
+```bash
+uv pip sync requirements.txt
+```
+
+```bash
+uv pip sync --reinstall --refresh --strict requirements.txt
 ```
