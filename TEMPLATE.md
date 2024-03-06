@@ -5,6 +5,7 @@
   - [Top-Ranking Issues (All Time)](https://github.com/zed-industries/zed/issues/5393) issue
   - https://zed.dev/docs/telemetry
   - https://zed.dev/docs/configuring-zed
+  - Current global configuration: https://github.com/joaopalmeiro/dotfiles
 - Ruff:
   - https://github.com/astral-sh/ruff/issues/809
   - https://github.com/astral-sh/ruff/discussions/3363
