@@ -5,6 +5,7 @@
   - [Top-Ranking Issues (All Time)](https://github.com/zed-industries/zed/issues/5393) issue
   - https://zed.dev/docs/telemetry
   - https://zed.dev/docs/configuring-zed
+  - https://github.com/zed-industries/zed/releases
   - Current global configuration: https://github.com/joaopalmeiro/dotfiles
 - Ruff:
   - https://github.com/astral-sh/ruff/issues/809
@@ -37,12 +38,4 @@ uv pip list --help
 
 ```bash
 which ruff
-```
-
-```bash
-uv pip sync requirements.txt
-```
-
-```bash
-uv pip sync --reinstall --refresh --strict requirements.txt
 ```

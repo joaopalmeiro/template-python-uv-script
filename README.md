@@ -5,6 +5,28 @@
 
 Opinionated [Python](https://www.python.org/) + [uv](https://github.com/astral-sh/uv) template for new scripts.
 
+## Getting Started
+
+1. Go to or create the project folder.
+2. Get the template files:
+
+```bash
+npx degit github:joaopalmeiro/template-python-uv-script
+```
+
+or
+
+```bash
+npx degit github:joaopalmeiro/template-python-uv-script --force
+```
+
+3. Search for `template-python-uv-script` and replace it with the project name.
+4. Search for `Opinionated [Python](https://www.python.org/) + [uv](https://github.com/astral-sh/uv) template for new scripts.` and replace it with the (short) project description.
+5. Search for `João Palmeiro` and replace it with the author's name.
+6. Open the [requirements.txt](requirements.txt) file and add the project-specific dependencies.
+7. Delete the [TEMPLATE.md](TEMPLATE.md) file.
+8. Delete the [`Getting Started`](#getting-started) section.
+
 ## Development
 
 Install [pyenv](https://github.com/pyenv/pyenv) (if necessary).
