@@ -1,0 +1,8 @@
+{
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": true,
+  "explorer.fileNesting.patterns": {
+    "README.md": "NOTES.md, TEMPLATE.md",
+    "requirements.txt": ".python-version, ruff.toml"
+  }
+}

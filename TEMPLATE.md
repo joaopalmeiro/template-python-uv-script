@@ -13,6 +13,12 @@
   - https://github.com/astral-sh/ruff/issues/1530
 - uv:
   - https://github.com/astral-sh/uv?tab=readme-ov-file#python-discovery
+- File nesting:
+  - https://code.visualstudio.com/updates/v1_67#_explorer-file-nesting
+  - https://github.com/antfu/vscode-file-nesting-config?tab=readme-ov-file#update-manually:
+    - Example: `"Pipfile": ".editorconfig, .flake8, .isort.cfg, .python-version, Pipfile, Pipfile.lock, requirements*.in, requirements*.pip, requirements*.txt, tox.ini"`
+  - https://code.visualstudio.com/docs/getstarted/settings#_default-settings:
+    - Example: `"package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb"`
 
 ## Commands
 
