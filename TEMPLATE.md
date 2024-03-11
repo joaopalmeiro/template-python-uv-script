@@ -13,6 +13,8 @@
   - https://github.com/astral-sh/ruff/issues/1530
 - uv:
   - https://github.com/astral-sh/uv?tab=readme-ov-file#python-discovery
+  - https://github.com/astral-sh/uv/releases
+  - https://github.com/astral-sh/uv/blob/0.1.17/PIP_COMPATIBILITY.md
 - File nesting:
   - https://code.visualstudio.com/updates/v1_67#_explorer-file-nesting
   - https://github.com/antfu/vscode-file-nesting-config?tab=readme-ov-file#update-manually:

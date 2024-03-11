@@ -36,7 +36,7 @@ pyenv install && pyenv versions
 ```
 
 ```bash
-pip install uv==0.1.15 && uv --version
+pip install uv==0.1.17 && uv --version
 ```
 
 ```bash
