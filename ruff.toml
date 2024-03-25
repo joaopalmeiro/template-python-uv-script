@@ -1,5 +1,5 @@
 # https://docs.astral.sh/ruff/settings/#required-version
-required-version = "0.3.0"
+required-version = "0.3.4"
 # https://docs.astral.sh/ruff/settings/#target-version
 target-version = "py310"
 # https://docs.astral.sh/ruff/settings/#output-format
@@ -14,9 +14,13 @@ select = ["ALL"]
 # https://docs.astral.sh/ruff/settings/#lint_fixable
 fixable = ["ALL"]
 # https://docs.astral.sh/ruff/settings/#lint_ignore
-# https://docs.astral.sh/ruff/rules/#pydocstyle-d
-# https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
-ignore = ["D", "COM812", "ISC001"]
+ignore = [
+    # https://docs.astral.sh/ruff/rules/#pydocstyle-d
+    "D",
+    # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+    "COM812",
+    "ISC001",
+]
 
 # Minimal:
 # https://docs.astral.sh/ruff/settings/#lint_extend-select
