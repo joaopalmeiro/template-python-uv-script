@@ -20,7 +20,7 @@ or
 npx degit github:joaopalmeiro/template-python-uv-script --force
 ```
 
-3. Search for `template-python-uv-script` and replace it with the project name.
+3. Search for `template-python-uv-script` and replace it with the project name. Ignore the template repository URL in the [NOTES.md](NOTES.md) file.
 4. Search for `Opinionated [Python](https://www.python.org/) + [uv](https://github.com/astral-sh/uv) template for new scripts.` and replace it with the (short) project description.
 5. Search for `João Palmeiro` and replace it with the author's name.
 6. Open the [requirements.txt](requirements.txt) file and add the project-specific dependencies.
