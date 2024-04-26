@@ -18,6 +18,7 @@
     - "[`flake8-boolean-trap`] Add setting for user defined allowed boolean trap"
   - https://docs.astral.sh/ruff/rules/#refurb-furb
   - https://pypi.org/project/refurb/
+  - https://astral.sh/blog/ruff-v0.4.0
 - uv:
   - https://github.com/astral-sh/uv?tab=readme-ov-file#python-discovery
   - https://github.com/astral-sh/uv/releases
@@ -44,6 +45,9 @@
     - https://github.com/python/mypy/blob/1.9.0/docs/source/config_file.rst#example-mypyini
     - https://github.com/python/mypy/blob/1.9.0/docs/source/existing_code.rst#introduce-stricter-options
     - https://github.com/python/mypy/blob/master/CHANGELOG.md#mypy-19
+- https://github.com/RustPython/Parser
+- https://github.com/RustPython/RustPython
+- https://github.com/youknowone/baembal
 
 ## Commands
 
@@ -81,4 +85,12 @@ uv pip sync requirements.txt
 
 ```bash
 uv pip sync --reinstall --refresh --strict requirements.txt
+```
+
+```bash
+ruff check --show-settings
+```
+
+```bash
+ruff check --show-files
 ```

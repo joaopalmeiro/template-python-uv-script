@@ -1,5 +1,5 @@
 # https://docs.astral.sh/ruff/settings/#required-version
-required-version = "0.3.6"
+required-version = "0.4.2"
 # https://docs.astral.sh/ruff/settings/#target-version
 target-version = "py310"
 # https://docs.astral.sh/ruff/settings/#output-format
