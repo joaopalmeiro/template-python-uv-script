@@ -14,6 +14,10 @@
   - https://github.com/astral-sh/ruff/releases
   - [`docs`: remove `.` from check and format commands](https://github.com/astral-sh/ruff/pull/10217)
   - https://github.com/astral-sh/ruff?tab=readme-ov-file#usage
+  - https://github.com/astral-sh/ruff/releases/tag/v0.3.5:
+    - "[`flake8-boolean-trap`] Add setting for user defined allowed boolean trap"
+  - https://docs.astral.sh/ruff/rules/#refurb-furb
+  - https://pypi.org/project/refurb/
 - uv:
   - https://github.com/astral-sh/uv?tab=readme-ov-file#python-discovery
   - https://github.com/astral-sh/uv/releases
