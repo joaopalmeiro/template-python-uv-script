@@ -30,6 +30,15 @@
   - https://code.visualstudio.com/docs/getstarted/settings#_default-settings:
     - Example: `"package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb"`
   - PyCharm also supports file nesting: https://www.jetbrains.com/help/pycharm/file-nesting-dialog.html
+- mypy:
+  - https://github.com/python/mypy/blob/master/CHANGELOG.md#mypy-110
+  - Config source:
+    - https://github.com/pydantic/pydantic/blob/v2.6.3/docs/integrations/mypy.md#configuring-the-plugin
+    - https://github.com/FlorianWilhelm/the-hatchlor/blob/v0.3/%7B%7Bcookiecutter.project_slug%7D%7D/pyproject.toml#L81
+    - https://github.com/python/mypy/blob/1.9.0/docs/source/config_file.rst
+    - https://github.com/python/mypy/blob/1.9.0/docs/source/config_file.rst#example-mypyini
+    - https://github.com/python/mypy/blob/1.9.0/docs/source/existing_code.rst#introduce-stricter-options
+    - https://github.com/python/mypy/blob/master/CHANGELOG.md#mypy-19
 
 ## Commands
 
@@ -59,4 +68,12 @@ which ruff
 
 ```bash
 uv pip check --help
+```
+
+```bash
+uv pip sync requirements.txt
+```
+
+```bash
+uv pip sync --reinstall --refresh --strict requirements.txt
 ```

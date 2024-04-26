@@ -69,6 +69,10 @@ ruff check
 ```
 
 ```bash
+mypy
+```
+
+```bash
 ruff check --fix
 ```
 
