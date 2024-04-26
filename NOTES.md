@@ -7,3 +7,7 @@
 ```bash
 pip config unset global.require-virtualenv
 ```
+
+```bash
+rm -rf .venv/ .mypy_cache/ .ruff_cache/
+```

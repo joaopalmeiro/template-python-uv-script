@@ -31,6 +31,7 @@
     - Example: `"package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb"`
   - PyCharm also supports file nesting: https://www.jetbrains.com/help/pycharm/file-nesting-dialog.html
 - mypy:
+  - https://pypi.org/project/mypy/
   - https://github.com/python/mypy/blob/master/CHANGELOG.md#mypy-110
   - Config source:
     - https://github.com/pydantic/pydantic/blob/v2.6.3/docs/integrations/mypy.md#configuring-the-plugin
