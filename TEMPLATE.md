@@ -28,6 +28,12 @@
     - [Add `uv pip check`](https://github.com/astral-sh/uv/pull/2397)
     - https://github.com/astral-sh/uv/blob/0.1.24/PIP_COMPATIBILITY.md#pip-check
     - https://pip.pypa.io/en/stable/cli/pip_check/
+  - https://github.com/astral-sh/uv/releases/tag/0.1.30:
+    - https://github.com/astral-sh/uv/blob/0.1.30/crates/uv/Cargo.toml#L49
+    - https://crates.io/crates/miette
+  - `uv.toml`:
+    - https://github.com/astral-sh/uv/blob/0.1.39/PIP_COMPATIBILITY.md#configuration-files-and-environment-variables
+    - https://github.com/astral-sh/uv/issues/651
 - File nesting:
   - https://code.visualstudio.com/updates/v1_67#_explorer-file-nesting
   - https://github.com/antfu/vscode-file-nesting-config?tab=readme-ov-file#update-manually:
