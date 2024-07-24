@@ -37,7 +37,7 @@ pyenv install && pyenv versions
 ```
 
 ```bash
-pip install uv==0.1.39 && uv --version
+pip install uv==0.2.28 && uv --version
 ```
 
 ```bash
@@ -62,6 +62,10 @@ uv pip list --strict
 
 ```bash
 uv pip check --verbose
+```
+
+```bash
+uv pip tree --show-version-specifiers --strict
 ```
 
 ```bash

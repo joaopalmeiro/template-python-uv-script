@@ -34,6 +34,8 @@
   - `uv.toml`:
     - https://github.com/astral-sh/uv/blob/0.1.39/PIP_COMPATIBILITY.md#configuration-files-and-environment-variables
     - https://github.com/astral-sh/uv/issues/651
+  - https://github.com/astral-sh/uv/pull/3859: `uv pip tree`
+  - https://github.com/astral-sh/uv/pull/5141: https://github.com/oracle/graalpython
 - File nesting:
   - https://code.visualstudio.com/updates/v1_67#_explorer-file-nesting
   - https://github.com/antfu/vscode-file-nesting-config?tab=readme-ov-file#update-manually:
@@ -103,6 +105,10 @@ ruff check --show-files
 
 ```bash
 which ruff && which mypy
+```
+
+```bash
+uv tool --help
 ```
 
 ## Snippets
