@@ -19,3 +19,9 @@ deactivate && uv venv .venv && source .venv/bin/activate && uv pip install -r re
 ```bash
 uv venv .venv && source .venv/bin/activate && uv pip install -r requirements.txt
 ```
+
+### Clean slate
+
+```bash
+rm -rf .mypy_cache/ .ruff_cache/ .venv/
+```
