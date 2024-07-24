@@ -100,3 +100,18 @@ ruff check --show-settings
 ```bash
 ruff check --show-files
 ```
+
+```bash
+which ruff && which mypy
+```
+
+## Snippets
+
+### `ruff.toml` file
+
+```toml
+# Minimal:
+# https://docs.astral.sh/ruff/settings/#lint_extend-select
+# https://docs.astral.sh/ruff/rules/#isort-i
+# extend-select = ["I"]
+```
