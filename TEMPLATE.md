@@ -38,6 +38,8 @@
   - https://github.com/astral-sh/uv/pull/5141: https://github.com/oracle/graalpython
   - https://docs.astral.sh/uv/
   - https://docs.astral.sh/uv/getting-started/installation/#homebrew
+  - https://github.com/astral-sh/uv/releases/tag/0.3.0:
+    - "`uv venv` will read the required Python version from the `.python-version` file or `pyproject.toml`"
 - File nesting:
   - https://code.visualstudio.com/updates/v1_67#_explorer-file-nesting
   - https://github.com/antfu/vscode-file-nesting-config?tab=readme-ov-file#update-manually:
