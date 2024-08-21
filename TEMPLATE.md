@@ -36,6 +36,8 @@
     - https://github.com/astral-sh/uv/issues/651
   - https://github.com/astral-sh/uv/pull/3859: `uv pip tree`
   - https://github.com/astral-sh/uv/pull/5141: https://github.com/oracle/graalpython
+  - https://docs.astral.sh/uv/
+  - https://docs.astral.sh/uv/getting-started/installation/#homebrew
 - File nesting:
   - https://code.visualstudio.com/updates/v1_67#_explorer-file-nesting
   - https://github.com/antfu/vscode-file-nesting-config?tab=readme-ov-file#update-manually:
@@ -109,32 +111,4 @@ which ruff && which mypy
 
 ```bash
 uv tool --help
-```
-
-## Snippets
-
-### `ruff.toml` file
-
-```toml
-# Minimal:
-# https://docs.astral.sh/ruff/settings/#lint_extend-select
-# https://docs.astral.sh/ruff/rules/#isort-i
-# extend-select = ["I"]
-```
-
-### `.vscode/settings.json` file
-
-```json
-{
-  "explorer.fileNesting.enabled": true,
-  "explorer.fileNesting.expand": true,
-  "explorer.fileNesting.patterns": {
-    "README.md": "NOTES.md, TEMPLATE.md",
-    "requirements.txt": ".python-version, mypy.ini, ruff.toml"
-  }
-}
-```
-
-```markdown
-7. Remove `, TEMPLATE.md` from the `README.md` file nesting pattern in the [.vscode/settings.json](.vscode/settings.json) file.
 ```
