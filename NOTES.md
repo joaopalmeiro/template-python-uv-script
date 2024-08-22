@@ -5,15 +5,17 @@
 ## Commands
 
 ```bash
-pip config unset global.require-virtualenv
-```
-
-```bash
 deactivate && uv venv .venv && source .venv/bin/activate && uv pip install -r requirements.txt
 ```
 
 ```bash
 uv venv .venv && source .venv/bin/activate && uv pip install -r requirements.txt
+```
+
+```bash
+echo "Cache directory:" && uv cache dir && \
+echo "\nTool directory:" && uv tool dir && \
+echo "\nPython directory:" && uv python dir
 ```
 
 ### Clean slate

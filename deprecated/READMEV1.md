@@ -12,7 +12,13 @@ Opinionated [Python](https://www.python.org/) + [uv](https://github.com/astral-s
 2. Get the template files:
 
 ```bash
-npx giget github:joaopalmeiro/template-python-uv-script . --force
+npx degit github:joaopalmeiro/template-python-uv-script
+```
+
+or
+
+```bash
+npx degit github:joaopalmeiro/template-python-uv-script --force
 ```
 
 3. Search for `template-python-uv-script` and replace it with the project name. Ignore the template repository URL in the [NOTES.md](NOTES.md) file.
@@ -24,18 +30,18 @@ npx giget github:joaopalmeiro/template-python-uv-script . --force
 
 ## Development
 
-Install [uv](https://docs.astral.sh/uv/getting-started/installation/) (if necessary).
+Install [pyenv](https://github.com/pyenv/pyenv) (if necessary).
 
 ```bash
-uv python install
+pyenv install && pyenv versions
+```
+
+```bash
+pip install uv==0.2.28 && uv --version
 ```
 
 ```bash
 uv venv .venv --verbose
-```
-
-```bash
-cat .venv/pyvenv.cfg
 ```
 
 ```bash

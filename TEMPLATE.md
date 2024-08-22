@@ -40,6 +40,22 @@
   - https://docs.astral.sh/uv/getting-started/installation/#homebrew
   - https://github.com/astral-sh/uv/releases/tag/0.3.0:
     - "`uv venv` will read the required Python version from the `.python-version` file or `pyproject.toml`"
+  - `uvx` or `uv tool run`:
+    - Alternative to `pipx`
+    - "Tools are Python packages that provide command-line interfaces."
+  - "The pip interface": "uv provides a drop-in replacement for common `pip`, `pip-tools`, and `virtualenv` commands."
+  - https://docs.astral.sh/uv/guides/publish/: "uv does not yet have dedicated commands for building and publishing a package."
+  - https://docs.astral.sh/uv/concepts/python-versions/:
+    - "uv does not distinguish between Python versions installed by the operating system vs those installed and managed by other tools. For example, if a Python installation is managed with `pyenv`, it would still be considered a _system_ Python version in uv."
+    - `uv python install`: "However, a project may define a `.python-version` file specifying the default Python version to be used. If present, uv will install the Python version listed in the file."
+  - https://docs.astral.sh/uv/reference/settings/:
+    - https://docs.astral.sh/uv/reference/settings/#exclude-newer: "Limit candidate packages to those that were uploaded prior to the given date."
+  - https://docs.astral.sh/uv/concepts/python-versions/#python-implementation-support:
+    - "uv supports the CPython, PyPy, and GraalPy Python implementations."
+    - "uv supports downloading and installing CPython and PyPy distributions."
+  - https://docs.astral.sh/uv/pip/packages/#installing-packages-from-files
+  - https://docs.astral.sh/uv/pip/dependencies/#using-requirementsin: `requirements.in` instead of `requirements.txt`
+  - https://github.com/astral-sh/uv/releases/tag/0.3.1
 - File nesting:
   - https://code.visualstudio.com/updates/v1_67#_explorer-file-nesting
   - https://github.com/antfu/vscode-file-nesting-config?tab=readme-ov-file#update-manually:
@@ -60,6 +76,8 @@
 - https://github.com/RustPython/Parser
 - https://github.com/RustPython/RustPython
 - https://github.com/youknowone/baembal
+- https://www.python.org/downloads/
+- https://github.com/dimastbk/python-calamine
 
 ## Commands
 
@@ -113,4 +131,28 @@ which ruff && which mypy
 
 ```bash
 uv tool --help
+```
+
+```bash
+uv python pin 3.10.13
+```
+
+```bash
+brew install uv
+```
+
+```bash
+uv cache prune
+```
+
+```bash
+uv cache clean
+```
+
+```bash
+uv pip list --format json
+```
+
+```bash
+pip config unset global.require-virtualenv
 ```
