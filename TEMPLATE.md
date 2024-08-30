@@ -56,6 +56,8 @@
   - https://docs.astral.sh/uv/pip/packages/#installing-packages-from-files
   - https://docs.astral.sh/uv/pip/dependencies/#using-requirementsin: `requirements.in` instead of `requirements.txt`
   - https://github.com/astral-sh/uv/releases/tag/0.3.1
+  - https://docs.astral.sh/uv/reference/settings/#managed
+  - https://docs.astral.sh/uv/reference/settings/#package
 - File nesting:
   - https://code.visualstudio.com/updates/v1_67#_explorer-file-nesting
   - https://github.com/antfu/vscode-file-nesting-config?tab=readme-ov-file#update-manually:
@@ -80,6 +82,10 @@
 - https://github.com/dimastbk/python-calamine
 
 ## Commands
+
+```bash
+rm -rf deprecated/ TEMPLATE.md
+```
 
 ```bash
 zed ~/Documents/GitHub/template-python-uv-script/
@@ -155,4 +161,8 @@ uv pip list --format json
 
 ```bash
 pip config unset global.require-virtualenv
+```
+
+```bash
+uv python list
 ```
