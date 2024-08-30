@@ -81,6 +81,9 @@
 - https://github.com/youknowone/baembal
 - https://www.python.org/downloads/
 - https://github.com/dimastbk/python-calamine
+- https://www.stefanjudis.com/today-i-learned/readonly-files-in-vscode/
+- https://blog.yusong.me/config/vscode
+- https://code.visualstudio.com/docs/editor/glob-patterns
 
 ## Commands
 
