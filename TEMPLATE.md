@@ -58,6 +58,7 @@
   - https://github.com/astral-sh/uv/releases/tag/0.3.1
   - https://docs.astral.sh/uv/reference/settings/#managed
   - https://docs.astral.sh/uv/reference/settings/#package
+  - [`uv` should provide a build backend](https://github.com/astral-sh/uv/issues/3957) open issue
 - File nesting:
   - https://code.visualstudio.com/updates/v1_67#_explorer-file-nesting
   - https://github.com/antfu/vscode-file-nesting-config?tab=readme-ov-file#update-manually:
