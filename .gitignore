@@ -1,7 +1,8 @@
-.DS_Store
-.venv/
-.mypy_cache/
-__pycache__/
+# .ruff_cache/: https://docs.astral.sh/ruff/settings/#cache-dir
 
-# https://docs.astral.sh/ruff/settings/#cache-dir
+__pycache__/
+.mypy_cache/
 .ruff_cache/
+.venv/
+
+.DS_Store
