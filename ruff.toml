@@ -1,11 +1,13 @@
 # https://docs.astral.sh/ruff/settings/#required-version
-required-version = "0.5.4"
+required-version = "0.6.9"
 # https://docs.astral.sh/ruff/settings/#target-version
 target-version = "py310"
 # https://docs.astral.sh/ruff/settings/#output-format
 output-format = "full"
 # https://docs.astral.sh/ruff/settings/#preview
 preview = false
+# https://docs.astral.sh/ruff/settings/#extend-exclude
+extend-exclude = ["deprecated"]
 
 [lint]
 # https://docs.astral.sh/ruff/linter/#rule-selection
@@ -35,5 +37,6 @@ ignore = [
 ]
 
 # https://docs.astral.sh/ruff/settings/#lint_isort_combine-as-imports
+# https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules (w/ formatter)
 [lint.isort]
 combine-as-imports = true

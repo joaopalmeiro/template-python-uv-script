@@ -19,6 +19,7 @@
   - https://docs.astral.sh/ruff/rules/#refurb-furb
   - https://pypi.org/project/refurb/
   - https://astral.sh/blog/ruff-v0.4.0
+  - https://astral.sh/blog/ruff-v0.6.0
 - uv:
   - https://github.com/astral-sh/uv?tab=readme-ov-file#python-discovery
   - https://github.com/astral-sh/uv/releases
