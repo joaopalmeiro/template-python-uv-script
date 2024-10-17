@@ -5,11 +5,11 @@
 ## Commands
 
 ```bash
-deactivate && uv venv .venv && source .venv/bin/activate && uv pip install -r requirements.txt
+deactivate && uv venv .venv && source .venv/bin/activate && uv pip install -r requirements.txt --strict
 ```
 
 ```bash
-uv venv .venv && source .venv/bin/activate && uv pip install -r requirements.txt
+uv venv .venv && source .venv/bin/activate && uv pip install -r requirements.txt --strict
 ```
 
 ```bash

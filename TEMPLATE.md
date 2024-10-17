@@ -60,6 +60,10 @@
   - https://docs.astral.sh/uv/reference/settings/#managed
   - https://docs.astral.sh/uv/reference/settings/#package
   - [`uv` should provide a build backend](https://github.com/astral-sh/uv/issues/3957) open issue
+  - https://docs.astral.sh/uv/guides/publish/#building-your-package
+  - https://docs.astral.sh/uv/guides/publish/#publishing-your-package
+  - https://docs.astral.sh/uv/guides/scripts/#creating-a-python-script
+  - [Add templates for popular build backends](https://github.com/astral-sh/uv/pull/7857) PR
 - File nesting:
   - https://code.visualstudio.com/updates/v1_67#_explorer-file-nesting
   - https://github.com/antfu/vscode-file-nesting-config?tab=readme-ov-file#update-manually:
@@ -92,6 +96,7 @@
 - https://www.stefanjudis.com/today-i-learned/readonly-files-in-vscode/
 - https://blog.yusong.me/config/vscode
 - https://code.visualstudio.com/docs/editor/glob-patterns
+- https://mac.install.guide/homebrew/4
 
 ## Commands
 
@@ -160,6 +165,14 @@ brew install uv
 ```
 
 ```bash
+brew update
+```
+
+```bash
+brew upgrade uv
+```
+
+```bash
 uv cache prune
 ```
 
@@ -177,4 +190,8 @@ pip config unset global.require-virtualenv
 
 ```bash
 uv python list
+```
+
+```bash
+uv init --script example.py --python 3.10
 ```

@@ -48,7 +48,7 @@ which python && python --version
 ```
 
 ```bash
-uv pip install -r requirements.txt
+uv pip install -r requirements.txt --strict
 ```
 
 ```bash
