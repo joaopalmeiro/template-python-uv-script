@@ -69,6 +69,13 @@
 - mypy:
   - https://pypi.org/project/mypy/
   - https://github.com/python/mypy/blob/master/CHANGELOG.md#mypy-110
+  - https://github.com/python/mypy/blob/master/CHANGELOG.md#mypy-111:
+    - "Mypy now type checks uses of `functools.partial`."
+  - https://github.com/python/mypy/blob/master/CHANGELOG.md#mypy-112:
+    - "Mypy now always tries to infer a union type for a conditional expression if left and right operand types are different. This results in more precise inferred types and lets mypy detect more issues."
+    - "You can now use `typing.ReadOnly` to specity `TypedDict` items as read-only (...)"
+    - https://docs.python.org/3/library/typing.html#typing.ReadOnly: "Added in version 3.13."
+    - https://github.com/python/mypy/blob/master/CHANGELOG.md#experimental-inline-typeddict-syntax
   - Config source:
     - https://github.com/pydantic/pydantic/blob/v2.6.3/docs/integrations/mypy.md#configuring-the-plugin
     - https://github.com/FlorianWilhelm/the-hatchlor/blob/v0.3/%7B%7Bcookiecutter.project_slug%7D%7D/pyproject.toml#L81
