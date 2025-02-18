@@ -105,6 +105,8 @@
   - Python IDE
   - https://scripton.dev/
   - https://docs.scripton.dev/ide/manual/visualization
+- https://github.com/NowanIlfideme/pydantic-yaml
+- https://docs.swarms.world/en/latest/swarms/structs/yaml_model/
 
 ## Commands
 
