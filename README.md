@@ -19,7 +19,7 @@ npx giget github:joaopalmeiro/template-python-uv-script . --force
 4. Search for `Opinionated [Python](https://www.python.org/) + [uv](https://github.com/astral-sh/uv) template for new scripts.` and replace it with the (short) project description.
 5. Search for `João Palmeiro` and replace it with the author's name.
 6. Open the [requirements.txt](requirements.txt) file and add the project-specific dependencies.
-7. Delete the [deprecated/](deprecated) folder.
+7. Delete the [deprecated/](deprecated) folder and the corresponding VS Code configuration in the [.vscode/settings.json](.vscode/settings.json) file.
 8. Delete the [TEMPLATE.md](TEMPLATE.md) file.
 9. Delete the [`Getting Started`](#getting-started) section.
 
