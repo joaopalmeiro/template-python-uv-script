@@ -64,6 +64,10 @@
   - https://docs.astral.sh/uv/guides/publish/#publishing-your-package
   - https://docs.astral.sh/uv/guides/scripts/#creating-a-python-script
   - [Add templates for popular build backends](https://github.com/astral-sh/uv/pull/7857) PR
+  - https://docs.astral.sh/uv/concepts/projects/dependencies/#default-groups: "By default, uv includes the `dev` dependency group in the environment (...)"
+  - https://docs.astral.sh/uv/configuration/files/#env: `uv run --env-file .env -- python -c 'import os; print(os.getenv("MY_VAR"))'`
+  - https://bas.codes/posts/python-project-setup-uv
+  - https://docs.astral.sh/uv/concepts/projects/sync/
 - File nesting:
   - https://code.visualstudio.com/updates/v1_67#_explorer-file-nesting
   - https://github.com/antfu/vscode-file-nesting-config?tab=readme-ov-file#update-manually:
@@ -97,6 +101,10 @@
 - https://blog.yusong.me/config/vscode
 - https://code.visualstudio.com/docs/editor/glob-patterns
 - https://mac.install.guide/homebrew/4
+- Scripton:
+  - Python IDE
+  - https://scripton.dev/
+  - https://docs.scripton.dev/ide/manual/visualization
 
 ## Commands
 

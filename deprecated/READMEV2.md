@@ -25,18 +25,18 @@ npx giget github:joaopalmeiro/template-python-uv-script . --force
 
 ## Development
 
-Install [uv](https://docs.astral.sh/uv/getting-started/installation/) (if necessary):
-
-```bash
-curl -LsSf https://astral.sh/uv/0.6.1/install.sh | sh
-```
+Install [uv](https://docs.astral.sh/uv/getting-started/installation/) (if necessary).
 
 ```bash
 uv python install
 ```
 
 ```bash
-uv venv
+uv venv .venv --verbose
+```
+
+```bash
+cat .venv/pyvenv.cfg
 ```
 
 ```bash
@@ -44,11 +44,23 @@ source .venv/bin/activate
 ```
 
 ```bash
-uv pip install -r requirements.txt
+which python && python --version
 ```
 
 ```bash
-python 01.py
+uv pip install -r requirements.txt --strict
+```
+
+```bash
+uv pip list --strict
+```
+
+```bash
+uv pip check --verbose
+```
+
+```bash
+uv pip tree --show-version-specifiers --strict
 ```
 
 ```bash
@@ -65,6 +77,10 @@ ruff check --fix
 
 ```bash
 ruff format
+```
+
+```bash
+python 01.py
 ```
 
 ```bash
