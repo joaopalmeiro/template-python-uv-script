@@ -52,10 +52,6 @@ python 01.py
 ```
 
 ```bash
-ruff check
-```
-
-```bash
 mypy
 ```
 

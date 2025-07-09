@@ -205,3 +205,7 @@ uv python list
 ```bash
 uv init --script example.py --python 3.10
 ```
+
+```bash
+ruff check
+```
