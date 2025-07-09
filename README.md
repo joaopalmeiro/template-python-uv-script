@@ -28,7 +28,7 @@ npx giget github:joaopalmeiro/template-python-uv-script . --force
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/) (if necessary):
 
 ```bash
-curl -LsSf https://astral.sh/uv/0.6.13/install.sh | sh
+curl -LsSf https://astral.sh/uv/0.7.19/install.sh | sh
 ```
 
 ```bash
