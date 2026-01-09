@@ -20,6 +20,8 @@
   - https://pypi.org/project/refurb/
   - https://astral.sh/blog/ruff-v0.4.0
   - https://astral.sh/blog/ruff-v0.6.0
+  - https://github.com/astral-sh/ruff/releases/tag/0.14.11
+  - https://docs.astral.sh/ruff/settings/#lint_typing-extensions
 - uv:
   - https://github.com/astral-sh/uv?tab=readme-ov-file#python-discovery
   - https://github.com/astral-sh/uv/releases
