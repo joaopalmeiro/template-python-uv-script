@@ -21,7 +21,7 @@ fixable = ["ALL"]
 ignore = [
     # https://docs.astral.sh/ruff/rules/#pydocstyle-d
     "D",
-    # https://github.com/astral-sh/ruff/blob/0.11.2/docs/formatter.md#conflicting-lint-rules (w/ formatter)
+    # https://github.com/astral-sh/ruff/blob/0.14.11/docs/formatter.md#conflicting-lint-rules (w/ formatter)
     # https://docs.astral.sh/ruff/settings/#lint_flake8-implicit-str-concat_allow-multiline
     "W191",
     "E111",
@@ -36,6 +36,6 @@ ignore = [
 ]
 
 # https://docs.astral.sh/ruff/settings/#lint_isort_combine-as-imports
-# https://github.com/astral-sh/ruff/blob/0.11.2/docs/formatter.md#conflicting-lint-rules (w/ formatter)
+# https://github.com/astral-sh/ruff/blob/0.14.11/docs/formatter.md#conflicting-lint-rules (w/ formatter)
 [lint.isort]
 combine-as-imports = true
