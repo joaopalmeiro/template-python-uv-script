@@ -1,3 +1,4 @@
+# .mypy_cache/: https://mypy.readthedocs.io/en/stable/config_file.html#confval-cache_dir
 # .ruff_cache/: https://docs.astral.sh/ruff/settings/#cache-dir
 
 __pycache__/
