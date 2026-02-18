@@ -22,6 +22,8 @@
   - https://astral.sh/blog/ruff-v0.6.0
   - https://github.com/astral-sh/ruff/releases/tag/0.14.11
   - https://docs.astral.sh/ruff/settings/#lint_typing-extensions
+  - https://astral.sh/blog/ruff-v0.15.0
+    - https://docs.astral.sh/ruff/formatter/#markdown-code-formatting (preview)
 - uv:
   - https://github.com/astral-sh/uv?tab=readme-ov-file#python-discovery
   - https://github.com/astral-sh/uv/releases
