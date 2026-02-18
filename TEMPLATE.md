@@ -109,6 +109,21 @@
   - https://docs.scripton.dev/ide/manual/visualization
 - https://github.com/NowanIlfideme/pydantic-yaml
 - https://docs.swarms.world/en/latest/swarms/structs/yaml_model/
+- GEPA:
+  - https://pydantic.dev/articles/prompt-optimization-with-gepa
+  - https://github.com/Studio-Intrinsic/benchmarking-ocr-gepa
+  - https://github.com/gepa-ai/gepa
+    - "The easiest and most powerful way to use GEPA for prompt optimization is within DSPy, where the GEPA algorithm is directly available through the `dspy.GEPA` API."
+    - https://github.com/gepa-ai/gepa/blob/v0.0.27/src/gepa/examples/aime.py
+    - https://huggingface.co/datasets/AI-MO/aimo-validation-aime
+    - It supports multimodal tasks: https://github.com/gepa-ai/gepa/blob/b2b613ea189e72867d085b93614b3e626e4ccd8b/docs/docs/guides/faq.md#can-gepa-work-with-multimodalvlm-tasks
+    - https://gepa-ai.github.io/gepa/
+    - https://gepa-ai.github.io/gepa/guides/quickstart/#option-1-using-the-default-adapter
+      - `# Prepare data (aim for 30-300 examples for best results)`
+  - https://dspy.ai/tutorials/gepa_aime/
+  - https://dspy.ai/tutorials/gepa_facilitysupportanalyzer/
+  - https://huggingface.co/learn/cookbook/en/dspy_gepa
+  - https://dspy.ai/learn/programming/signatures/?h=image#example-e-multi-modal-image-classification
 
 ## Commands
 
@@ -210,4 +225,161 @@ uv init --script example.py --python 3.10
 
 ```bash
 ruff check
+```
+
+## Snippets
+
+```python
+import dspy
+from dspy.teleprompt.gepa.instruction_proposal import MultiModalInstructionProposer
+
+lm = dspy.LM("openai/gpt-4o-mini", api_key=api_key)
+dspy.configure(lm=lm)
+
+
+# Define the signature
+class ImageQA(dspy.Signature):
+    """Answer the question based on the image."""
+
+    image: dspy.Image = dspy.InputField(desc="An image to analyze")
+    question: str = dspy.InputField()
+    answer: str = dspy.OutputField()
+
+
+# Instantiate the program
+program = dspy.Predict(ImageQA)
+
+
+# Define the metric with feedback
+def metric_with_feedback(example, prediction, trace=None):
+    correct = example.answer.lower() in prediction.answer.lower()
+    score = 1.0 if correct else 0.0
+
+    if correct:
+        feedback = f"Correct! The answer '{prediction.answer}' matches the expected answer '{example.answer}'."
+    else:
+        feedback = (
+            f"Incorrect. Expected '{example.answer}' but got '{prediction.answer}'. "
+            f"Look more carefully at the visual content in the image."
+        )
+
+    return dspy.Prediction(score=score, feedback=feedback)
+
+
+# Prepare the dataset
+trainset = [
+    dspy.Example(
+        image=dspy.Image("https://example.com/photo_of_eiffel_tower.jpg"),
+        question="What landmark is shown?",
+        answer="Eiffel Tower",
+    ).with_inputs("image", "question"),
+    dspy.Example(
+        image=dspy.Image("/path/to/local/cat_image.png"),
+        question="What animal is in the image?",
+        answer="cat",
+    ).with_inputs("image", "question"),
+    # ... more examples (aim for 30-300)
+]
+
+
+# Optimize with GEPA
+optimizer = dspy.GEPA(
+    metric=metric_with_feedback,
+    reflection_lm=dspy.LM("openai/gpt-4o", api_key=api_key),
+    instruction_proposer=MultiModalInstructionProposer(),
+    auto="light",
+    num_threads=8,
+    track_stats=True,
+)
+
+optimized_program = optimizer.compile(program, trainset=trainset)
+
+
+# View the optimized prompt
+print(optimized_program.signature.instructions)
+```
+
+```python
+import dspy
+from datasets import load_dataset
+from dspy.teleprompt.gepa.instruction_proposal import MultiModalInstructionProposer
+
+api_key = input("Enter your OpenAI API key: ")
+
+lm = dspy.LM("openai/gpt-4o-mini", api_key=api_key)
+dspy.configure(lm=lm)
+
+
+# Define the signature
+class ChartQA(dspy.Signature):
+    """Answer the multiple-choice question about the chart. Respond with only the letter of the correct option."""
+
+    image: dspy.Image = dspy.InputField(desc="A chart or visualization")
+    question: str = dspy.InputField()
+    options: str = dspy.InputField(desc="The available answer options")
+    answer: str = dspy.OutputField(desc="The letter of the correct option (A, B, C, or D)")
+
+
+# Instantiate the program
+program = dspy.Predict(ChartQA)
+
+
+# Load and prepare the dataset
+def init_dataset():
+    ds = load_dataset("joaompalmeiro/MiniVLATGHDataset", split="test")
+
+    examples = []
+    for row in ds:
+        opts = row["options"]
+        options_str = ", ".join(
+            f"{k}: {v}" for k, v in opts.items() if v is not None
+        )
+
+        examples.append(
+            dspy.Example(
+                image=dspy.Image(row["image"]),
+                question=row["question"],
+                options=options_str,
+                answer=row["answer"],
+            ).with_inputs("image", "question", "options")
+        )
+
+    return examples
+
+
+trainset = init_dataset()
+print(f"Loaded {len(trainset)} examples")
+
+
+# Define the metric with feedback
+def metric_with_feedback(example, prediction, trace=None):
+    correct = prediction.answer.strip().upper() == example.answer.strip().upper()
+    score = 1.0 if correct else 0.0
+
+    if correct:
+        feedback = f"Correct! The answer '{prediction.answer}' matches the expected answer '{example.answer}'."
+    else:
+        feedback = (
+            f"Incorrect. Expected '{example.answer}' but got '{prediction.answer}'. "
+            f"Look more carefully at the visual content in the chart. "
+            f"The options were: {example.options}."
+        )
+
+    return dspy.Prediction(score=score, feedback=feedback)
+
+
+# Optimize with GEPA
+optimizer = dspy.GEPA(
+    metric=metric_with_feedback,
+    reflection_lm=dspy.LM("openai/gpt-4o", api_key=api_key),
+    instruction_proposer=MultiModalInstructionProposer(),
+    auto="light",
+    num_threads=8,
+    track_stats=True,
+)
+
+optimized_program = optimizer.compile(program, trainset=trainset)
+
+# View the optimized prompt
+print(optimized_program.signature.instructions)
 ```
