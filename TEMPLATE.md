@@ -146,6 +146,11 @@
   - "A relocatable virtual environment can be moved around and redistributed without invalidating its associated entrypoint and activation scripts."
 - https://www.docker.com/products/hardened-images/
   - https://hub.docker.com/hardened-images/catalog/dhi/node
+- https://github.com/lirantal/pypi-security-best-practices
+  - https://github.com/owenlamont/uv-secure
+  - https://socket.dev/blog/introducing-socket-firewall
+  - https://github.com/DataDog/supply-chain-firewall
+- https://github.com/nyudenkov/pysentry
 
 ## Commands
 
@@ -263,6 +268,10 @@ uv cache size
 
 ```bash
 uv audit
+```
+
+```bash
+uv export --format cyclonedx1.5 --output-file sbom.json
 ```
 
 ## Snippets

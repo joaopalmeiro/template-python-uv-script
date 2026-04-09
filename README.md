@@ -37,6 +37,10 @@ uv python install
 ```
 
 ```bash
+uv run uv-secure
+```
+
+```bash
 uv run python 01.py
 ```
 
