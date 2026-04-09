@@ -3,6 +3,6 @@
   "mypy-type-checker.importStrategy": "fromEnvironment",
 
   "files.readonlyInclude": {
-    "deprecated/**/{*.md,*.toml}": true
+    "deprecated/**/{*.md,*.toml,*.txt}": true
   }
 }

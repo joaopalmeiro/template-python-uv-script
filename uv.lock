@@ -2,6 +2,10 @@ version = 1
 revision = 3
 requires-python = ">=3.10.14"
 
+[options]
+exclude-newer = "2026-04-02T19:39:25.144318Z"
+exclude-newer-span = "P7D"
+
 [[package]]
 name = "mypy"
 version = "1.16.1"

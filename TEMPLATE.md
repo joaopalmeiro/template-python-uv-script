@@ -132,9 +132,20 @@
 - https://docs.astral.sh/uv/concepts/projects/export/
   - https://cyclonedx.org/
   - "Support for exporting to CycloneDX is in preview, and may change in any future release."
+  - https://github.com/CycloneDX/cyclonedx-python
 - https://github.com/microsoft/vscode-python/wiki/Setting-descriptions#pythondefaultinterpreterpath
   - "The `python.pythonPath` setting is no longer used by the Python extension."
   - "`python.defaultInterpreterPath` is introduced in the user and workspace scope, from which the extension will read the value when loading a project."
+- https://docs.astral.sh/uv/concepts/authentication/cli/
+  - "uv provides a high-level interface for storing and retrieving credentials from services."
+  - https://docs.astral.sh/uv/concepts/authentication/http/#the-uv-credentials-store
+  - https://docs.astral.sh/uv/concepts/authentication/http/#keyring-providers
+- https://docs.astral.sh/uv/guides/integration/coiled/
+  - https://coiled.io/
+- https://docs.astral.sh/uv/reference/cli/#uv-venv--relocatable
+  - "A relocatable virtual environment can be moved around and redistributed without invalidating its associated entrypoint and activation scripts."
+- https://www.docker.com/products/hardened-images/
+  - https://hub.docker.com/hardened-images/catalog/dhi/node
 
 ## Commands
 
@@ -240,6 +251,18 @@ ruff check
 
 ```bash
 uv init --app app-template
+```
+
+```bash
+uv tree --show-sizes
+```
+
+```bash
+uv cache size
+```
+
+```bash
+uv audit
 ```
 
 ## Snippets
