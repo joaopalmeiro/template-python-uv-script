@@ -20,9 +20,8 @@ npx giget github:joaopalmeiro/template-python-uv-script . --force
 5. Search for `João Palmeiro` and replace it with the author's name.
 6. Open the [requirements.txt](requirements.txt) file and add the project-specific dependencies.
 7. Delete the [deprecated/](deprecated) folder and the corresponding configuration in the [.vscode/settings.json](.vscode/settings.json) and [ruff.toml](ruff.toml) files.
-8. Remove `app-template/` from the [.gitignore](.gitignore) file.
-9. Delete the [TEMPLATE.md](TEMPLATE.md) file.
-10. Delete the [`Getting Started`](#getting-started) section.
+8. Delete the [TEMPLATE.md](TEMPLATE.md) file.
+9. Delete the [`Getting Started`](#getting-started) section.
 
 ## Development
 
@@ -37,17 +36,33 @@ uv python install
 ```
 
 ```bash
-uv run python 01.py
+uv venv
 ```
 
 ```bash
-uv run mypy
+source .venv/bin/activate
 ```
 
 ```bash
-uv run ruff check --fix
+uv pip install -r requirements.txt
 ```
 
 ```bash
-uv run ruff format
+python 01.py
+```
+
+```bash
+mypy
+```
+
+```bash
+ruff check --fix
+```
+
+```bash
+ruff format
+```
+
+```bash
+deactivate
 ```

@@ -72,6 +72,7 @@
   - https://docs.astral.sh/uv/configuration/files/#env: `uv run --env-file .env -- python -c 'import os; print(os.getenv("MY_VAR"))'`
   - https://bas.codes/posts/python-project-setup-uv
   - https://docs.astral.sh/uv/concepts/projects/sync/
+    - "Locking and syncing are automatic in uv. For example, when `uv run` is used, the project is locked and synced before invoking the requested command."
 - File nesting:
   - https://code.visualstudio.com/updates/v1_67#_explorer-file-nesting
   - https://github.com/antfu/vscode-file-nesting-config?tab=readme-ov-file#update-manually:
@@ -126,6 +127,14 @@
   - https://dspy.ai/tutorials/gepa_facilitysupportanalyzer/
   - https://huggingface.co/learn/cookbook/en/dspy_gepa
   - https://dspy.ai/learn/programming/signatures/?h=image#example-e-multi-modal-image-classification
+- https://docs.astral.sh/uv/concepts/projects/init/
+  - "Application projects are suitable for web servers, scripts, and command-line interfaces."
+- https://docs.astral.sh/uv/concepts/projects/export/
+  - https://cyclonedx.org/
+  - "Support for exporting to CycloneDX is in preview, and may change in any future release."
+- https://github.com/microsoft/vscode-python/wiki/Setting-descriptions#pythondefaultinterpreterpath
+  - "The `python.pythonPath` setting is no longer used by the Python extension."
+  - "`python.defaultInterpreterPath` is introduced in the user and workspace scope, from which the extension will read the value when loading a project."
 
 ## Commands
 
@@ -227,6 +236,10 @@ uv init --script example.py --python 3.10
 
 ```bash
 ruff check
+```
+
+```bash
+uv init --app app-template
 ```
 
 ## Snippets
