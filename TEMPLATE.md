@@ -274,6 +274,20 @@ uv audit
 uv export --format cyclonedx1.5 --output-file sbom.json
 ```
 
+```bash
+deactivate && uv venv && source .venv/bin/activate && uv pip install -r requirements.txt
+```
+
+```bash
+uv venv && source .venv/bin/activate && uv pip install -r requirements.txt
+```
+
+### Clean slate
+
+```bash
+rm -rf .mypy_cache/ .ruff_cache/ .venv/
+```
+
 ## Snippets
 
 ```python
