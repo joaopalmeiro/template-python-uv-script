@@ -12,7 +12,7 @@ Opinionated [Python](https://www.python.org/) + [uv](https://github.com/astral-s
 2. Get the template files:
 
 ```bash
-npx giget github:joaopalmeiro/template-python-uv-script . --force
+npx giget@3.2.0 github:joaopalmeiro/template-python-uv-script . --force
 ```
 
 3. Search for `template-python-uv-script` and replace it with the project name. Ignore the template repository URL in the [NOTES.md](NOTES.md) file.
