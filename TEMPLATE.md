@@ -98,6 +98,16 @@
     - https://github.com/python/mypy/blob/1.9.0/docs/source/config_file.rst#example-mypyini
     - https://github.com/python/mypy/blob/1.9.0/docs/source/existing_code.rst#introduce-stricter-options
     - https://github.com/python/mypy/blob/master/CHANGELOG.md#mypy-19
+    - https://mypy.readthedocs.io/en/stable/existing_code.html#introduce-stricter-options
+    - https://mypy.readthedocs.io/en/stable/command_line.html#cmdoption-mypy-allow-redefinition-new
+    - https://mypy.readthedocs.io/en/stable/config_file.html#confval-allow_redefinition_new
+    - https://github.com/python/mypy/blob/v1.20.2/CHANGELOG.md#mypy-120
+      - From `mypy[faster-cache]` to `mypy`
+      - "Mypy now uses a binary cache format (fixed-format cache) by default to speed up incremental checking."
+      - "The SQLite cache (`--sqlite-cache`) is now enabled by default. It improves mypy performance significantly in certain environments where slow file system operations used to be a bottleneck."
+    - https://mypy.readthedocs.io/en/stable/error_code_list2.html
+      - https://mypy.readthedocs.io/en/stable/error_code_list2.html#check-that-match-statements-match-exhaustively-exhaustive-match
+      - https://mypy.readthedocs.io/en/stable/error_code_list2.html#check-that-reveal-type-is-imported-from-typing-or-typing-extensions-unimported-reveal
 - https://github.com/RustPython/Parser
 - https://github.com/RustPython/RustPython
 - https://github.com/youknowone/baembal
