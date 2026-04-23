@@ -18,11 +18,10 @@ npx giget github:joaopalmeiro/template-python-uv-script . --force
 3. Search for `template-python-uv-script` and replace it with the project name. Ignore the template repository URL in the [NOTES.md](NOTES.md) file.
 4. Search for `Opinionated [Python](https://www.python.org/) + [uv](https://github.com/astral-sh/uv) template for new scripts.` and replace it with the (short) project description.
 5. Search for `João Palmeiro` and replace it with the author's name.
-6. Open the [requirements.txt](requirements.txt) file and add the project-specific dependencies.
-7. Delete the [deprecated/](deprecated) folder and the corresponding configuration in the [.vscode/settings.json](.vscode/settings.json) and [ruff.toml](ruff.toml) files.
-8. Remove `app-template/` from the [.gitignore](.gitignore) file.
-9. Delete the [TEMPLATE.md](TEMPLATE.md) file.
-10. Delete the [`Getting Started`](#getting-started) section.
+6. Delete the [deprecated/](deprecated) folder and the corresponding configuration in the [.vscode/settings.json](.vscode/settings.json) and [ruff.toml](ruff.toml) files.
+7. Remove `app-template/` from the [.gitignore](.gitignore) file.
+8. Delete the [TEMPLATE.md](TEMPLATE.md) file.
+9. Delete the [`Getting Started`](#getting-started) section.
 
 ## Development
 
@@ -49,9 +48,9 @@ uv run mypy
 ```
 
 ```bash
-uv run ruff check --fix
+uv run ruff format
 ```
 
 ```bash
-uv run ruff format
+uv run ruff check --fix
 ```

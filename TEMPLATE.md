@@ -153,6 +153,7 @@
   - https://socket.dev/blog/introducing-socket-firewall
   - https://github.com/DataDog/supply-chain-firewall
 - https://github.com/nyudenkov/pysentry
+- `6. Open the [requirements.txt](requirements.txt) file and add the project-specific dependencies.`
 
 ## Commands
 
