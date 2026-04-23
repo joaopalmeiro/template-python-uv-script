@@ -73,6 +73,7 @@
   - https://bas.codes/posts/python-project-setup-uv
   - https://docs.astral.sh/uv/concepts/projects/sync/
     - "Locking and syncing are automatic in uv. For example, when `uv run` is used, the project is locked and synced before invoking the requested command."
+  - https://docs.astral.sh/uv/reference/cli/#uv-audit
 - File nesting:
   - https://code.visualstudio.com/updates/v1_67#_explorer-file-nesting
   - https://github.com/antfu/vscode-file-nesting-config?tab=readme-ov-file#update-manually:
@@ -148,6 +149,7 @@
   - https://hub.docker.com/hardened-images/catalog/dhi/node
 - https://github.com/lirantal/pypi-security-best-practices
   - https://github.com/owenlamont/uv-secure
+    - "Deprecated dependency scanner for uv projects. Prefer uv audit for new use."
   - https://socket.dev/blog/introducing-socket-firewall
   - https://github.com/DataDog/supply-chain-firewall
 - https://github.com/nyudenkov/pysentry
@@ -280,6 +282,10 @@ deactivate && uv venv && source .venv/bin/activate && uv pip install -r requirem
 
 ```bash
 uv venv && source .venv/bin/activate && uv pip install -r requirements.txt
+```
+
+```bash
+uv run uv-secure
 ```
 
 ### Clean slate

@@ -37,7 +37,7 @@ uv python install
 ```
 
 ```bash
-uv run uv-secure
+uv audit --verbose
 ```
 
 ```bash
