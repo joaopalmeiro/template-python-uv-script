@@ -108,6 +108,7 @@
     - https://mypy.readthedocs.io/en/stable/error_code_list2.html
       - https://mypy.readthedocs.io/en/stable/error_code_list2.html#check-that-match-statements-match-exhaustively-exhaustive-match
       - https://mypy.readthedocs.io/en/stable/error_code_list2.html#check-that-reveal-type-is-imported-from-typing-or-typing-extensions-unimported-reveal
+    - https://mypy.readthedocs.io/en/stable/command_line.html#disallow-dynamic-typing
 - https://github.com/RustPython/Parser
 - https://github.com/RustPython/RustPython
 - https://github.com/youknowone/baembal
