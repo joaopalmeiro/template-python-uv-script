@@ -1,3 +1,4 @@
+add-bounds = "exact"
 exclude-newer = "7 days"
 python-downloads = "manual"
 python-preference = "only-managed"

@@ -74,6 +74,7 @@
   - https://docs.astral.sh/uv/concepts/projects/sync/
     - "Locking and syncing are automatic in uv. For example, when `uv run` is used, the project is locked and synced before invoking the requested command."
   - https://docs.astral.sh/uv/reference/cli/#uv-audit
+  - https://docs.astral.sh/uv/reference/settings/#add-bounds
 - File nesting:
   - https://code.visualstudio.com/updates/v1_67#_explorer-file-nesting
   - https://github.com/antfu/vscode-file-nesting-config?tab=readme-ov-file#update-manually:
